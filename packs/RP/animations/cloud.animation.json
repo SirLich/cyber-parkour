@@ -1,0 +1,43 @@
+{
+    "format_version": "1.10.0",
+    "animations": {
+        "animation.cloud_body": {
+            "loop": true,
+            "animation_length": 100,
+            "particle_effects": {
+                "0.0": [
+                    {
+                        "effect": "cloud",
+                        "locator": "body_locator",
+                        "pre_effect_script": "v.size_x = 2; v.size_y = 3; v.size_z = 1;"
+                    },
+                    {
+                        "effect": "cloud",
+                        "locator": "head_locator",
+                        "pre_effect_script": "v.size_x = 2; v.size_y = 2; v.size_z = 2;"
+                    },
+                    {
+                        "effect": "cloud",
+                        "locator": "left_arm_locator",
+                        "pre_effect_script": "v.size_x = 1; v.size_y = 3; v.size_z = 1;"
+                    },
+                    {
+                        "effect": "cloud",
+                        "locator": "right_arm_locator",
+                        "pre_effect_script": "v.size_x = 1; v.size_y = 3; v.size_z = 1;"
+                    },
+                    {
+                        "effect": "cloud",
+                        "locator": "right_leg_locator",
+                        "pre_effect_script": "v.size_x = 1; v.size_y = 3; v.size_z = 1;"
+                    },
+                    {
+                        "effect": "cloud",
+                        "locator": "left_leg_locator",
+                        "pre_effect_script": "v.size_x = 1; v.size_y = 3; v.size_z = 1;"
+                    }
+                ]
+            }
+        }
+    }
+}

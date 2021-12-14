@@ -1,0 +1,70 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "minecraft:item",
+			"animations": {
+				"item": "controller.animation.item"
+			},
+			"scripts": {
+				"animate": [
+					"item"
+				]
+			}
+		},
+		"component_groups": {
+			"air": {
+				"minecraft:type_family": {
+					"family": [
+						"air"
+					]
+				}
+			},
+			"ground": {
+				"minecraft:type_family": {
+					"family": [
+						"ground"
+					]
+				},
+				"minecraft:environment_sensor": {
+					"triggers": [
+						{
+							"event": "air",
+							"target": "self",
+							"filters": {
+								"test": "on_ground",
+								"operator": "!="
+							}
+						}
+					]
+				}
+			}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"add": {
+					"component_groups": [
+						"air"
+					]
+				}
+			},
+			"ground": {
+				"add": {
+					"component_groups": [
+						"ground"
+					]
+				}
+			},
+			"air": {
+				"add": {
+					"component_groups": [
+						"air"
+					]
+				}
+			}
+		},
+		"components": {
+
+		}
+	}
+}

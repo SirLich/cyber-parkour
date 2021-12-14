@@ -1,0 +1,45 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "sirlich:cloud_man",
+			"materials": {
+				"default": "entity"
+			},
+			"geometry": {
+				"default": "geometry.npc.steve"
+			},
+			"particle_effects": {
+				"cloud": "sirlich:cloud"
+			},
+			"render_controllers": [
+				"controller.render.cloud_man"
+			],
+			"textures": {
+				"default": "textures/entity/small"
+			},
+			"scripts": {
+				"scale": "0.9375",
+				"pre_animation": [
+					"variable.tcos0 = (math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;"
+				],
+				"animate": [
+					"cloud_effects",
+					"move.arms",
+					"move.legs",
+					"look_at_target_default",
+					"bob",
+					"zombie_attack_bare_hand"
+				]
+			},
+			"animations": {
+				"zombie_attack_bare_hand": "animation.zombie.attack_bare_hand",
+				"cloud_effects": "animation.cloud_body",
+				"look_at_target_default": "animation.humanoid.look_at_target.default",
+				"move.arms": "animation.player.move.arms",
+				"move.legs": "animation.player.move.legs",
+				"bob": "animation.player.bob"
+			}
+		}
+	}
+}
