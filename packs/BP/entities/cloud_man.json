@@ -17,6 +17,22 @@
                     "mob"
                 ]
             },
+            "minecraft:environment_sensor": [
+                {
+                    "triggers": {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "has_tag",
+                                    "subject": "self",
+                                    "value": "trapped"
+                                }
+                            ]
+                        },
+                        "event": "creep:free"
+                    }
+                }
+            ],
             "minecraft:movement": {
                 "max": 0.2
             },
